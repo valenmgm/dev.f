@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  MyBlogg
+  {%for element in categorias%}
+    <a href="{% url 'urlcategoria' element.id %}">{{element.nombre_cat}} </a>
+  {%endfor%}
+{%for post in datos%}
+  {{post.titulo}}
+  {{post.contenido}}
+Ver Detalle
+  {% endfor %}
+  Crea tu Propio Post
+  </body>
+</html>
